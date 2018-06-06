@@ -1,63 +1,59 @@
-// adauga intrun predicat toate codurile ascii ale caracterelor a fi evitate
-// ascii pentru reguli
-caracter_cuvanta(C):- member(C,[40,41,45,62]).
-
 scop -> statuie.
 
-r->
-vrea_liniste?=?da fc ->
+r -> 1
+vrea_liniste?=?da fc -> 100
 premise -> (
 	nu vrea_boxa +
 	vrea_fantana
 ).
 
-r->
-vrea_liniste?=?nu fc ->
+r -> 2
+vrea_liniste?=?nu fc -> 100
 premise -> (
 	vrea_boxa +
 	nu vrea_fantana
 ).
 
-r->
-vrea_liniste?=?da fc ->
+r -> 3
+vrea_liniste?=?da fc -> 100
 premise -> (
 	nu vrea_boxa +
 	nu vrea_fantana
 ).
 
-r->
-tip_utilizator?=?parinte fc -> 
+r -> 4
+tip_utilizator?=?parinte fc -> 100
 premise -> (
 	nu vrea_liniste +
 	nu iubeste_horror +
 	este_parinte
 ).
 
-r->
-tip_utilizator?=?parinte fc -> 
+r -> 5
+tip_utilizator?=?parinte fc -> 100 
 premise -> (
 	vrea_liniste +
 	nu iubeste_horror +
 	este_parinte
 ).
 
-r->
-tip_utilizator?=?fan_horror fc -> 
+r -> 6
+tip_utilizator?=?fan_horror fc -> 100 
 premise -> (
 	vrea_liniste +
 	iubeste_horror +
 	nu este_parinte
 ).
 
-r->
-tip_gradina?=?de_noapte fc -> 
+r -> 7
+tip_gradina?=?de_noapte fc -> 100 
 premise -> (
 	vrea_lumina +
 	dimensiune_gradina ?=? medie
 ).
 
-r->
-statuie?=?fantana_artesiana fc ->
+r -> 8
+statuie?=?fantana_artesiana fc -> 100
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
@@ -66,8 +62,8 @@ premise -> (
 	tip_utilizator ?=? parinte
 ).
 
-r->
-statuie?=?felinar fc -> 
+r -> 9
+statuie?=?felinar fc -> 100 
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? alb +
@@ -76,8 +72,8 @@ premise -> (
 	tip_gradina ?=? de_noapte
 ).
 
-r->
-statuie?=?statuie_cu_pasare fc -> 
+r -> 10
+statuie?=?statuie_cu_pasare fc -> 100 
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? gri +
@@ -85,8 +81,8 @@ premise -> (
 	dimensiune_statuie ?=? medie
 ).
 
-r->
-statuie?=?pitic_cu_boxa fc -> 
+r -> 11
+statuie?=?pitic_cu_boxa fc -> 100 
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -96,8 +92,8 @@ premise -> (
 ).
 
 
-r->
-statuie?=?pitic_cu_lampa fc -> 
+r -> 12
+statuie?=?pitic_cu_lampa fc -> 100 
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -106,8 +102,8 @@ premise -> (
 	tip_gradina ?=? de_noapte
 ).
 
-r->
-statuie?=?pitic_zombie fc ->
+r -> 13
+statuie?=?pitic_zombie fc -> 100
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -116,8 +112,8 @@ premise -> (
 	tip_utilizator ?=? fan_horror
 ).
 
-r->
-statuie?=?statuie_cu_copil fc ->
+r -> 14
+statuie?=?statuie_cu_copil fc -> 100
 premise -> (
 	tip_statuie ?=? om +
 	culoare ?=? alb +
@@ -125,8 +121,8 @@ premise -> (
 	dimensiune_statuie ?=? medie
 ).
 
-r->
-statuie?=?broscuta_vesela fc ->
+r -> 15
+statuie?=?broscuta_vesela fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? verde +
@@ -135,8 +131,8 @@ premise -> (
 	tip_utilizator ?=? parinte
 ).
 
-r->
-statuie?=?iepure fc ->
+r -> 16
+statuie?=?iepure fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
@@ -145,8 +141,8 @@ premise -> (
 	tip_utilizator ?=? parinte
 ).
 
-r->
-statuie?=?ingeras fc ->
+r -> 17
+statuie?=?ingeras fc -> 100
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? gri +
@@ -154,8 +150,8 @@ premise -> (
 	dimensiune_statuie ?=? medie + 
 ).
 
-r->
-statuie?=?alba_ca_zapada fc ->
+r -> 18
+statuie?=?alba_ca_zapada fc -> 100
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -164,8 +160,8 @@ premise -> (
 	tip_utilizator ?=? parinte
 ).
 
-r->
-statuie?=?jardiniera fc ->
+r -> 19
+statuie?=?jardiniera fc -> 100
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
@@ -173,8 +169,8 @@ premise -> (
 	dimensiune_statuie ?=? medie
 ).
 
-r->
-statuie?=?doamna_justitie fc ->
+r -> 20
+statuie?=?doamna_justitie fc -> 100
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? bronz +
@@ -182,8 +178,8 @@ premise -> (
 	dimensiune_statuie ?=? medie
 ).
 
-r->
-statuie?=?leu fc ->
+r -> 21
+statuie?=?leu fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? gri +
@@ -191,8 +187,8 @@ premise -> (
 	dimensiune_statuie ?=? mare
 ).
 
-r->
-statuie?=?caine fc ->
+r -> 22
+statuie?=?caine fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
@@ -200,20 +196,18 @@ premise -> (
 	dimensiune_statuie ?=? mica
 ).
 
-
 interog -> tip_statuie
-text_interog -> 'Dimensiunea statuii doriti sa fie:'
-lista_optiuni -> (
+text_interog -> 'Tipul statuii doriti sa fie:'
+list_optiuni -> (
 -> animal
 -> om
 -> fiinta_fantastica
 -> decoratiune
 ).
 
-
 interog -> culoare
 text_interog -> 'Culoarea statuii:'
-lista_optiuni -> (
+list_optiuni -> (
 -> maro
 -> alb
 -> gri
@@ -224,7 +218,7 @@ lista_optiuni -> (
 
 interog -> pret
 text_interog -> 'Bugetul de care dispuneti este...'
-lista_optiuni -> (
+list_optiuni -> (
 -> mare
 -> mediu
 -> mic
@@ -232,8 +226,42 @@ lista_optiuni -> (
 
 interog -> dimensiune_statuie
 text_interog -> 'Dimensiunea statuii doriti sa fie:'
-lista_optiuni -> (
+list_optiuni -> (
 -> mare
 -> medie
 -> mica
+).
+
+interog -> vrea_liniste
+text_interog -> 'Preferati un ambient mai linistit?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
+interog -> este_parinte
+text_interog -> 'Sunteti parinte?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
+interog -> iubeste_horror
+text_interog -> 'Va plac chestiile horror?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
+interog -> vrea_boxa
+text_interog -> 'Doriti sa redati muzica?'
+list_optiuni -> (
+-> da
+-> nu
+).
+interog -> vrea_fantana
+text_interog -> 'Doriti o fantana?'
+list_optiuni -> (
+-> da
+-> nu
 ).

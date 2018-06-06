@@ -19,3 +19,20 @@ list_optiuni -> (
 -> val3 
 ).
 ============================ 37
+
+Pentru a lua maxim pe interfata grafica, aceasta trebuie sa indeplineasca obiectivele amintite si la laborator:
+
+	- sa pastreze toate functionalitatile din consola 
+	(absolut toate optiunile din meniu si informatiile afisate de catre sistemul expert)
+
+	- sa afiseze intrebarile dar si solutiile intr-o maniera interactiva
+
+	- pentru fiecare solutie sa se afiseze imaginea, descrierea, specificatiile 
+	(proprietatile din etapa1 - transimse din baza de cunostinte prolog)
+
+	- pentru fiecare solutie sa se poata afisa demonstratia
+	
+	- sa verifice eventualul input al utilizatorului 
+	(in cazul in care foloseste textbox-uri si nu butoane). Utilizatorul sa poata seta fc pentru raspunsuri.
+
+	- sa poate fi accesate cunostintele sistemului (afisarea faptelor) si istoricul raspunsurilor la intrebari
