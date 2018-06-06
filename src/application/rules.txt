@@ -57,8 +57,8 @@ statuie?=?fantana_artesiana fc -> 100
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
-	pret ?=? mare
-	dimensiune_statuie ?=? medie
+	pret ?=? mare +
+	dimensiune_statuie ?=? medie +
 	tip_utilizator ?=? parinte
 ).
 
@@ -122,12 +122,12 @@ premise -> (
 ).
 
 r -> 15
-statuie?=?broscuta_vesela fc -> 100
+statuie?=?broscuta fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? verde +
-	pret ?=? mica +
-	dimensiune_statuie ?=? mica
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
 	tip_utilizator ?=? parinte
 ).
 
@@ -136,8 +136,8 @@ statuie?=?iepure fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
-	pret ?=? mica +
-	dimensiune_statuie ?=? mica
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
 	tip_utilizator ?=? parinte
 ).
 
@@ -147,7 +147,7 @@ premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? gri +
 	pret ?=? mediu +
-	dimensiune_statuie ?=? medie + 
+	dimensiune_statuie ?=? medie
 ).
 
 r -> 18
@@ -155,8 +155,8 @@ statuie?=?alba_ca_zapada fc -> 100
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
-	pret ?=? mica +
-	dimensiune_statuie ?=? mica
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
 	tip_utilizator ?=? parinte
 ).
 
