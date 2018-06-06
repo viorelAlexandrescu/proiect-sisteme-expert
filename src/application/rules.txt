@@ -4,16 +4,236 @@ caracter_cuvanta(C):- member(C,[40,41,45,62]).
 
 scop -> statuie.
 
-regula->1
-dimensiune_statuie?=?mare fc -> 90
+r->
+vrea_liniste?=?da fc ->
 premise -> (
-	buget_disponibil ?=? mare
+	nu vrea_boxa +
+	vrea_fantana
 ).
 
-interog -> buget_disponibil
+r->
+vrea_liniste?=?nu fc ->
+premise -> (
+	vrea_boxa +
+	nu vrea_fantana
+).
+
+r->
+vrea_liniste?=?da fc ->
+premise -> (
+	nu vrea_boxa +
+	nu vrea_fantana
+).
+
+r->
+tip_utilizator?=?parinte fc -> 
+premise -> (
+	nu vrea_liniste +
+	nu iubeste_horror +
+	este_parinte
+).
+
+r->
+tip_utilizator?=?parinte fc -> 
+premise -> (
+	vrea_liniste +
+	nu iubeste_horror +
+	este_parinte
+).
+
+r->
+tip_utilizator?=?fan_horror fc -> 
+premise -> (
+	vrea_liniste +
+	iubeste_horror +
+	nu este_parinte
+).
+
+r->
+tip_gradina?=?de_noapte fc -> 
+premise -> (
+	vrea_lumina +
+	dimensiune_gradina ?=? medie
+).
+
+r->
+statuie?=?fantana_artesiana fc ->
+premise -> (
+	tip_statuie ?=? decoratiune +
+	culoare ?=? gri +
+	pret ?=? mare
+	dimensiune_statuie ?=? medie
+	tip_utilizator ?=? parinte
+).
+
+r->
+statuie?=?felinar fc -> 
+premise -> (
+	tip_statuie ?=? decoratiune +
+	culoare ?=? alb +
+	pret ?=? mare +
+	dimensiune_statuie ?=? mare +
+	tip_gradina ?=? de_noapte
+).
+
+r->
+statuie?=?statuie_cu_pasare fc -> 
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? gri +
+	pret ?=? mare +
+	dimensiune_statuie ?=? medie
+).
+
+r->
+statuie?=?pitic_cu_boxa fc -> 
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? mica +
+	tip_utilizator ?=? parinte
+).
+
+
+r->
+statuie?=?pitic_cu_lampa fc -> 
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
+	tip_gradina ?=? de_noapte
+).
+
+r->
+statuie?=?pitic_zombie fc ->
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? mica +
+	tip_utilizator ?=? fan_horror
+).
+
+r->
+statuie?=?statuie_cu_copil fc ->
+premise -> (
+	tip_statuie ?=? om +
+	culoare ?=? alb +
+	pret ?=? mare +
+	dimensiune_statuie ?=? medie
+).
+
+r->
+statuie?=?broscuta_vesela fc ->
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? verde +
+	pret ?=? mica +
+	dimensiune_statuie ?=? mica
+	tip_utilizator ?=? parinte
+).
+
+r->
+statuie?=?iepure fc ->
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? maro +
+	pret ?=? mica +
+	dimensiune_statuie ?=? mica
+	tip_utilizator ?=? parinte
+).
+
+r->
+statuie?=?ingeras fc ->
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? gri +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? medie + 
+).
+
+r->
+statuie?=?alba_ca_zapada fc ->
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mica +
+	dimensiune_statuie ?=? mica
+	tip_utilizator ?=? parinte
+).
+
+r->
+statuie?=?jardiniera fc ->
+premise -> (
+	tip_statuie ?=? decoratiune +
+	culoare ?=? gri +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? medie
+).
+
+r->
+statuie?=?doamna_justitie fc ->
+premise -> (
+	tip_statuie ?=? decoratiune +
+	culoare ?=? bronz +
+	pret ?=? mare +
+	dimensiune_statuie ?=? medie
+).
+
+r->
+statuie?=?leu fc ->
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? gri +
+	pret ?=? mare +
+	dimensiune_statuie ?=? mare
+).
+
+r->
+statuie?=?caine fc ->
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? maro +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? mica
+).
+
+
+interog -> tip_statuie
+text_interog -> 'Dimensiunea statuii doriti sa fie:'
+lista_optiuni -> (
+-> animal
+-> om
+-> fiinta_fantastica
+-> decoratiune
+).
+
+
+interog -> culoare
+text_interog -> 'Culoarea statuii:'
+lista_optiuni -> (
+-> maro
+-> alb
+-> gri
+-> verde
+-> multicolor
+-> bronz
+).
+
+interog -> pret
 text_interog -> 'Bugetul de care dispuneti este...'
 lista_optiuni -> (
 -> mare
 -> mediu
 -> mic
+).
+
+interog -> dimensiune_statuie
+text_interog -> 'Dimensiunea statuii doriti sa fie:'
+lista_optiuni -> (
+-> mare
+-> medie
+-> mica
 ).
