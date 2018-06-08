@@ -73,7 +73,7 @@ premise -> (
 ).
 
 r -> 10
-statuie?=?statuie_cu_pasare fc -> 100 
+statuie?=?statuie_cu_pasare fc -> 80
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? gri +

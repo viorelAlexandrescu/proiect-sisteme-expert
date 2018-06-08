@@ -106,12 +106,11 @@ executa([iesire]):-!.
 executa([_|_]) :-
 write('Comanda incorecta! '),nl.
 
+afis_list_scop([H|T]):- afis_list_scop(T), H = st(FC,av(Atr,Val)),scrie_scop(av(Atr,Val),FC).
+afis_list_scop([]).
 
-scopuri_princ :-
-scop(Atr),determina(Atr), afiseaza_scop(Atr),fail.
-
-scopuri_princ.
-
+scopuri_princ:- scop(Atr),setof(st(FC,av(Atr,Val)),Istorie^(determina(Atr),fapt(av(Atr,Val),FC,Istorie)),L),afis_list_scop(L).
+scopuri_princ:- write('nu avem solutii'),nl.
 
 determina(Atr) :-
 realizare_scop(av(Atr,_),_,[scop(Atr)]),!.
@@ -132,7 +131,8 @@ transformare(av(Atr,Val), X),
 scrie_lista(X),tab(2),
 write(' '),
 write('factorul de certitudine este '),
-FC1 is integer(FC),write(FC1).
+FC1 is integer(FC),write(FC1),
+nl.
 
 
 realizare_scop(not Scop,Not_FC,Istorie) :-
