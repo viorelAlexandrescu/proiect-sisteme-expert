@@ -30,7 +30,7 @@ premise -> (
 ).
 
 r -> 5
-tip_utilizator?=?parinte fc -> 100 
+tip_utilizator?=?parinte fc -> 90 
 premise -> (
 	vrea_liniste +
 	nu iubeste_horror +
@@ -38,7 +38,7 @@ premise -> (
 ).
 
 r -> 6
-tip_utilizator?=?fan_horror fc -> 100 
+tip_utilizator?=?fan_horror fc -> 70 
 premise -> (
 	vrea_liniste +
 	iubeste_horror +
@@ -46,154 +46,428 @@ premise -> (
 ).
 
 r -> 7
-tip_gradina?=?de_noapte fc -> 100 
+tip_utilizator?=?petrecaret fc -> 80 
 premise -> (
-	vrea_lumina +
-	dimensiune_gradina ?=? medie
+	nu vrea_liniste +
+	nu este_parinte + 
+	iubeste_muzica
 ).
 
 r -> 8
+tip_gradina?=?de_noapte fc -> 100 
+premise -> (
+	vrea_lumina
+).
+
+r -> 9
+tip_gradina?=?de_iarna fc -> 100 
+premise -> (
+	rezistenta_inghet
+).
+
+r -> 10
+tip_gradina?=?de_vara fc -> 80 
+premise -> (
+	nu rezistenta_inghet
+).
+
+r -> 11
+tip_gradina?=?de_zi fc -> 90 
+premise -> (
+	nu vrea_lumina
+).
+
+r -> 12
 statuie?=?fantana_artesiana fc -> 100
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
 	pret ?=? mare +
 	dimensiune_statuie ?=? medie +
-	tip_utilizator ?=? parinte
+	tip_utilizator ?=? parinte +
+	finisaj ?=? mat +
+	material ?=? beton +
+	tip_gradina ?=? de_vara
 ).
 
-r -> 9
-statuie?=?felinar fc -> 100 
+r -> 13
+statuie?=?fantana_artesiana fc -> 100
 premise -> (
 	tip_statuie ?=? decoratiune +
-	culoare ?=? alb +
+	culoare ?=? gri +
 	pret ?=? mare +
-	dimensiune_statuie ?=? mare +
-	tip_gradina ?=? de_noapte
+	dimensiune_statuie ?=? medie +
+	tip_utilizator ?=? parinte +
+	finisaj ?=? mat +
+	material ?=? beton +
+	tip_gradina ?=? de_zi
 ).
 
-r -> 10
+r -> 14
+statuie?=?felinar fc -> 90
+premise -> (
+	tip_statuie ?=? decoratiune +
+	culoare ?=? bej +
+	pret ?=? mare +
+	dimensiune_statuie ?=? mare +
+	tip_gradina ?=? de_noapte + 
+	finisaj ?=? vintage + 
+	material ?=? beton
+).
+
+r -> 15
+statuie?=?felinar fc -> 90
+premise -> (
+	tip_statuie ?=? decoratiune +
+	culoare ?=? bej +
+	pret ?=? mare +
+	dimensiune_statuie ?=? mare +
+	tip_gradina ?=? de_iarna + 
+	finisaj ?=? vintage + 
+	material ?=? beton
+).
+
+r -> 16
 statuie?=?statuie_cu_pasare fc -> 80
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? gri +
 	pret ?=? mare +
-	dimensiune_statuie ?=? medie
+	dimensiune_statuie ?=? medie + 
+	material ?=? ipsos +
+	finisaj ?=? vintage + 
+	tip_gradina ?=? de_vara
 ).
 
-r -> 11
+r -> 17
+statuie?=?statuie_cu_pasare fc -> 80
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? gri +
+	pret ?=? mare +
+	dimensiune_statuie ?=? medie + 
+	material ?=? ipsos +
+	finisaj ?=? vintage + 
+	tip_gradina ?=? de_zi
+).
+
+r -> 18
 statuie?=?pitic_cu_boxa fc -> 100 
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
 	pret ?=? mediu +
 	dimensiune_statuie ?=? mica +
-	tip_utilizator ?=? parinte
+	tip_utilizator ?=? petrecaret +
+	material ?=? ipsos +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_vara
 ).
 
 
-r -> 12
-statuie?=?pitic_cu_lampa fc -> 100 
+r -> 19
+statuie?=?pitic_cu_lampa fc -> 80
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
 	pret ?=? mic +
 	dimensiune_statuie ?=? mica +
-	tip_gradina ?=? de_noapte
+	tip_gradina ?=? de_noapte +
+	tip_utilizator ?=? parinte + 
+	material ?=? ipsos + 
+	finisaj ?=? lucios +
 ).
 
-r -> 13
+r -> 20
+statuie?=?pitic_cu_lampa fc -> 80
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
+	tip_gradina ?=? de_vara +
+	tip_utilizator ?=? parinte + 
+	material ?=? ipsos + 
+	finisaj ?=? lucios +
+).
+
+r -> 21
 statuie?=?pitic_zombie fc -> 100
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
 	pret ?=? mediu +
 	dimensiune_statuie ?=? mica +
-	tip_utilizator ?=? fan_horror
+	tip_utilizator ?=? fan_horror +
+	material ?=? ipsos +
+	finisaj ?=? vintage +
+	tip_gradina ?=? de_vara
 ).
 
-r -> 14
+r -> 22
+statuie?=?pitic_zombie fc -> 100
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? mica +
+	tip_utilizator ?=? fan_horror +
+	material ?=? ipsos +
+	finisaj ?=? vintage +
+	tip_gradina ?=? de_zi
+).
+
+r -> 23
 statuie?=?statuie_cu_copil fc -> 100
 premise -> (
 	tip_statuie ?=? om +
 	culoare ?=? alb +
 	pret ?=? mare +
-	dimensiune_statuie ?=? medie
+	dimensiune_statuie ?=? medie +
+	material ?=? marmura +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_iarna
 ).
 
-r -> 15
+r -> 24
+statuie?=?statuie_cu_copil fc -> 100
+premise -> (
+	tip_statuie ?=? om +
+	culoare ?=? alb +
+	pret ?=? mare +
+	dimensiune_statuie ?=? medie +
+	material ?=? marmura +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_zi
+).
+
+r -> 25
 statuie?=?broscuta fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? verde +
 	pret ?=? mic +
 	dimensiune_statuie ?=? mica +
-	tip_utilizator ?=? parinte
+	tip_utilizator ?=? parinte +
+	material ?=? ceramica +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_vara
 ).
 
-r -> 16
+r -> 26
+statuie?=?broscuta fc -> 100
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? verde +
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
+	tip_utilizator ?=? parinte +
+	material ?=? ceramica +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_zi
+).
+
+r -> 27
 statuie?=?iepure fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
 	pret ?=? mic +
 	dimensiune_statuie ?=? mica +
-	tip_utilizator ?=? parinte
+	tip_utilizator ?=? parinte +
+	material ?=? pvc +
+	finisaj ?=? lucios +
+	tip_gradina ?=? de_zi
 ).
 
-r -> 17
-statuie?=?ingeras fc -> 100
+r -> 28
+statuie?=?iepure fc -> 100
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? maro +
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
+	tip_utilizator ?=? parinte +
+	material ?=? pvc +
+	finisaj ?=? lucios +
+	tip_gradina ?=? de_vara
+).
+
+r -> 29
+statuie?=?ingeras fc -> 90
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? gri +
 	pret ?=? mediu +
-	dimensiune_statuie ?=? medie
+	dimensiune_statuie ?=? medie +
+	material ?=? beton +
+	finisaj ?=? vintage +
+	tip_gradina ?=? de_iarna
 ).
 
-r -> 18
+r -> 30
+statuie?=?ingeras fc -> 90
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? gri +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? medie +
+	material ?=? beton +
+	finisaj ?=? vintage +
+	tip_gradina ?=? de_zi
+).
+
+
+r -> 31
 statuie?=?alba_ca_zapada fc -> 100
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
-	pret ?=? mic +
-	dimensiune_statuie ?=? mica +
-	tip_utilizator ?=? parinte
+	pret ?=? mediu +
+	dimensiune_statuie ?=? medie +
+	tip_utilizator ?=? parinte +
+	personaj_poveste + 
+	material ?=? ipsos +
+	finisaj ?=? lucios +
+	tip_gradina ?=? de_vara
 ).
 
-r -> 19
+r -> 32
+statuie?=?alba_ca_zapada fc -> 100
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? medie +
+	tip_utilizator ?=? parinte +
+	personaj_poveste + 
+	material ?=? ipsos +
+	finisaj ?=? lucios +
+	tip_gradina ?=? de_zi
+).
+
+r -> 33
 statuie?=?jardiniera fc -> 100
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
 	pret ?=? mediu +
-	dimensiune_statuie ?=? medie
+	dimensiune_statuie ?=? medie +
+	material ?=? beton +
+	finisaj ?=? vintage +
+	tip_gradina ?=? de_zi
 ).
 
-r -> 20
+r -> 34
+statuie?=?jardiniera fc -> 100
+premise -> (
+	tip_statuie ?=? decoratiune +
+	culoare ?=? gri +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? medie +
+	material ?=? beton +
+	finisaj ?=? vintage +
+	tip_gradina ?=? de_iarna
+).
+
+r -> 35
 statuie?=?doamna_justitie fc -> 100
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? bronz +
 	pret ?=? mare +
-	dimensiune_statuie ?=? medie
+	dimensiune_statuie ?=? medie +
+	material ?=? bronz +
+	finisaj ?=? lucios +
+	tip_gradina ?=? de_zi
 ).
 
-r -> 21
-statuie?=?leu fc -> 100
+r -> 36
+statuie?=?doamna_justitie fc -> 100
+premise -> (
+	tip_statuie ?=? decoratiune +
+	culoare ?=? bronz +
+	pret ?=? mare +
+	dimensiune_statuie ?=? medie +
+	material ?=? bronz +
+	finisaj ?=? lucios +
+	tip_gradina ?=? de_vara
+).
+
+r -> 37
+statuie?=?leu fc -> 80
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? gri +
 	pret ?=? mare +
 	dimensiune_statuie ?=? mare
+	material ?=? beton +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_iarna
 ).
 
-r -> 22
+r -> 38
+statuie?=?leu fc -> 80
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? gri +
+	pret ?=? mare +
+	dimensiune_statuie ?=? mare
+	material ?=? beton +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_zi
+).
+
+r -> 39
 statuie?=?caine fc -> 100
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
 	pret ?=? mediu +
-	dimensiune_statuie ?=? mica
+	dimensiune_statuie ?=? mica + 
+	material ?=? ipsos +
+	finisaj ?=? lucios +
+	tip_gradina ?=? de_zi
+).
+
+r -> 40
+statuie?=?caine fc -> 100
+premise -> (
+	tip_statuie ?=? animal +
+	culoare ?=? maro +
+	pret ?=? mediu +
+	dimensiune_statuie ?=? mica + 
+	material ?=? ipsos +
+	finisaj ?=? lucios +
+	tip_gradina ?=? de_vara
+).
+
+r -> 41
+statuie?=?motanul_incaltat fc -> 100
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
+	tip_utilizator ?=? parinte +
+	personaj_poveste + 
+	material ?=? ceramica +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_zi
+).
+
+r -> 42
+statuie?=?motanul_incaltat fc -> 100
+premise -> (
+	tip_statuie ?=? fiinta_fantastica +
+	culoare ?=? multicolor +
+	pret ?=? mic +
+	dimensiune_statuie ?=? mica +
+	tip_utilizator ?=? parinte +
+	personaj_poveste + 
+	material ?=? ceramica +
+	finisaj ?=? mat +
+	tip_gradina ?=? de_vara
 ).
 
 interog -> tip_statuie
@@ -214,6 +488,7 @@ list_optiuni -> (
 -> verde
 -> multicolor
 -> bronz
+-> bej
 ).
 
 interog -> pret
@@ -232,8 +507,48 @@ list_optiuni -> (
 -> mica
 ).
 
+interog -> personaj_poveste
+text_interog -> 'Doriti ca statuia sa reprezinte un personaj dintr-o poveste?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
+interog -> material
+text_interog -> 'Materialul statuii doriti sa fie:'
+list_optiuni -> (
+-> ipsos
+-> ceramica
+-> beton
+-> bronz
+-> marmura
+-> pvc
+).
+
+interog -> finisaj
+text_interog -> 'Finisajul statuii doriti sa fie:'
+list_optiuni -> (
+-> vintage
+-> lucios
+-> mat
+).
+
+interog -> rezistenta_inghet
+text_interog -> 'Doriti ca statuia sa reziste la inghet?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
 interog -> vrea_liniste
 text_interog -> 'Preferati un ambient mai linistit?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
+interog -> vrea_lumina
+text_interog -> 'Doriti ca statuia sa ilumineze gradina?'
 list_optiuni -> (
 -> da
 -> nu
@@ -253,12 +568,20 @@ list_optiuni -> (
 -> nu
 ).
 
+interog -> iubeste_muzica
+text_interog -> 'Va place muzica?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
 interog -> vrea_boxa
 text_interog -> 'Doriti sa redati muzica?'
 list_optiuni -> (
 -> da
 -> nu
 ).
+
 interog -> vrea_fantana
 text_interog -> 'Doriti o fantana?'
 list_optiuni -> (
