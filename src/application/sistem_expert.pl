@@ -323,7 +323,7 @@ transformare(not av(A,da), [nu,A]) :- !.
 
 transformare(av(A,nu),[nu,A]) :- !.
 
-transformare(av(A,V),[A,'?=?',V]).
+transformare(av(A,V),[A,'?','=','?',V]).
 
 
 premisele(N) :-
