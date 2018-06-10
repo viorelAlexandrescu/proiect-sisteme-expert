@@ -319,11 +319,11 @@ scrie_lista_premise(Stream,[H|T]) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 transformare(av(A,da),[A]) :- !.
 
-transformare(not av(A,da), [not,A]) :- !.
+transformare(not av(A,da), [nu,A]) :- !.
 
-transformare(av(A,nu),[not,A]) :- !.
+transformare(av(A,nu),[nu,A]) :- !.
 
-transformare(av(A,V),[A,este,V]).
+transformare(av(A,V),[A,'?=?',V]).
 
 
 premisele(N) :-
