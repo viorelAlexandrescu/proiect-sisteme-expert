@@ -645,7 +645,7 @@ premise -> (
 ).
 
 r -> 57
-statuie?=?piticul_pescar fc -> 75
+statuie?=?piticul_pescar fc -> 85
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -653,7 +653,7 @@ premise -> (
 	dimensiune_statuie ?=? mica +
 	material ?=? ceramica +
 	finisaj ?=? mat +
-	tip_gradina ?=? de_vara
+	tip_gradina ?=? cu_lac
 ).
 
 r -> 58
@@ -664,7 +664,14 @@ premise -> (
 	pret ?=? mediu +
 	dimensiune_statuie ?=? mica +
 	material ?=? ceramica +
-	finisaj ?=? mat
+	finisaj ?=? mat +
+	inspira_lene
+).
+
+r -> 59
+tip_gradina?=?cu_lac fc -> 70
+premise -> (
+	gradina_are_lac
 ).
 
 interog -> tip_statuie
@@ -789,6 +796,20 @@ list_optiuni -> (
 
 interog -> mediteaza
 text_interog -> 'De fel meditati in timpul liber?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
+interog -> inspira_lene
+text_interog -> 'Sunteti o fire lenesa?'
+list_optiuni -> (
+-> da
+-> nu
+).
+
+interog -> gradina_are_lac
+text_interog -> 'Aveti un lac in gradina dumneavoastra?'
 list_optiuni -> (
 -> da
 -> nu
