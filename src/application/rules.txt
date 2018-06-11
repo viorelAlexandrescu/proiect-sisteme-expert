@@ -1,28 +1,28 @@
 scop -> statuie.
 
 r -> 1
-vrea_liniste?=?da fc -> 100
+vrea_liniste?=?da fc -> 80
 premise -> (
 	nu vrea_boxa +
 	vrea_fantana
 ).
 
 r -> 2
-vrea_liniste?=?nu fc -> 100
+vrea_liniste?=?nu fc -> 70
 premise -> (
 	vrea_boxa +
 	nu vrea_fantana
 ).
 
 r -> 3
-vrea_liniste?=?da fc -> 100
+vrea_liniste?=?da fc -> 90
 premise -> (
 	nu vrea_boxa +
 	nu vrea_fantana
 ).
 
 r -> 4
-tip_utilizator?=?parinte fc -> 100
+tip_utilizator?=?parinte fc -> 80
 premise -> (
 	nu vrea_liniste +
 	nu iubeste_horror +
@@ -54,13 +54,13 @@ premise -> (
 ).
 
 r -> 8
-tip_gradina?=?de_noapte fc -> 100 
+tip_gradina?=?de_noapte fc -> 80 
 premise -> (
 	vrea_lumina
 ).
 
 r -> 9
-tip_gradina?=?de_iarna fc -> 100 
+tip_gradina?=?de_iarna fc -> 90 
 premise -> (
 	rezistenta_inghet
 ).
@@ -78,7 +78,7 @@ premise -> (
 ).
 
 r -> 12
-statuie?=?fantana_artesiana fc -> 100
+statuie?=?fantana_artesiana fc -> 90
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
@@ -91,7 +91,7 @@ premise -> (
 ).
 
 r -> 13
-statuie?=?fantana_artesiana fc -> 100
+statuie?=?fantana_artesiana fc -> 90
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
@@ -152,7 +152,7 @@ premise -> (
 ).
 
 r -> 18
-statuie?=?pitic_cu_boxa fc -> 100 
+statuie?=?pitic_cu_boxa fc -> 70 
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -175,7 +175,7 @@ premise -> (
 	tip_gradina ?=? de_noapte +
 	tip_utilizator ?=? parinte + 
 	material ?=? ipsos + 
-	finisaj ?=? lucios +
+	finisaj ?=? lucios
 ).
 
 r -> 20
@@ -188,11 +188,11 @@ premise -> (
 	tip_gradina ?=? de_vara +
 	tip_utilizator ?=? parinte + 
 	material ?=? ipsos + 
-	finisaj ?=? lucios +
+	finisaj ?=? lucios
 ).
 
 r -> 21
-statuie?=?pitic_zombie fc -> 100
+statuie?=?pitic_zombie fc -> 60
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -205,7 +205,7 @@ premise -> (
 ).
 
 r -> 22
-statuie?=?pitic_zombie fc -> 100
+statuie?=?pitic_zombie fc -> 65
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -218,7 +218,7 @@ premise -> (
 ).
 
 r -> 23
-statuie?=?statuie_cu_copil fc -> 100
+statuie?=?statuie_cu_copil fc -> 80
 premise -> (
 	tip_statuie ?=? om +
 	culoare ?=? alb +
@@ -230,7 +230,7 @@ premise -> (
 ).
 
 r -> 24
-statuie?=?statuie_cu_copil fc -> 100
+statuie?=?statuie_cu_copil fc -> 80
 premise -> (
 	tip_statuie ?=? om +
 	culoare ?=? alb +
@@ -242,7 +242,7 @@ premise -> (
 ).
 
 r -> 25
-statuie?=?broscuta fc -> 100
+statuie?=?broscuta fc -> 75
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? verde +
@@ -255,7 +255,7 @@ premise -> (
 ).
 
 r -> 26
-statuie?=?broscuta fc -> 100
+statuie?=?broscuta fc -> 75
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? verde +
@@ -268,7 +268,7 @@ premise -> (
 ).
 
 r -> 27
-statuie?=?iepure fc -> 100
+statuie?=?iepure fc -> 85
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
@@ -281,7 +281,7 @@ premise -> (
 ).
 
 r -> 28
-statuie?=?iepure fc -> 100
+statuie?=?iepure fc -> 85
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
@@ -319,7 +319,7 @@ premise -> (
 
 
 r -> 31
-statuie?=?alba_ca_zapada fc -> 100
+statuie?=?alba_ca_zapada fc -> 80
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -333,7 +333,7 @@ premise -> (
 ).
 
 r -> 32
-statuie?=?alba_ca_zapada fc -> 100
+statuie?=?alba_ca_zapada fc -> 80
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -347,7 +347,7 @@ premise -> (
 ).
 
 r -> 33
-statuie?=?jardiniera fc -> 100
+statuie?=?jardiniera fc -> 60
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
@@ -359,7 +359,7 @@ premise -> (
 ).
 
 r -> 34
-statuie?=?jardiniera fc -> 100
+statuie?=?jardiniera fc -> 60
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? gri +
@@ -371,7 +371,7 @@ premise -> (
 ).
 
 r -> 35
-statuie?=?doamna_justitie fc -> 100
+statuie?=?doamna_justitie fc -> 55
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? bronz +
@@ -383,7 +383,7 @@ premise -> (
 ).
 
 r -> 36
-statuie?=?doamna_justitie fc -> 100
+statuie?=?doamna_justitie fc -> 55
 premise -> (
 	tip_statuie ?=? decoratiune +
 	culoare ?=? bronz +
@@ -419,7 +419,7 @@ premise -> (
 ).
 
 r -> 39
-statuie?=?caine fc -> 100
+statuie?=?caine fc -> 75
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
@@ -431,7 +431,7 @@ premise -> (
 ).
 
 r -> 40
-statuie?=?caine fc -> 100
+statuie?=?caine fc -> 75
 premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? maro +
@@ -443,7 +443,7 @@ premise -> (
 ).
 
 r -> 41
-statuie?=?motanul_incaltat fc -> 100
+statuie?=?motanul_incaltat fc -> 78
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
@@ -457,7 +457,7 @@ premise -> (
 ).
 
 r -> 42
-statuie?=?motanul_incaltat fc -> 100
+statuie?=?motanul_incaltat fc -> 78
 premise -> (
 	tip_statuie ?=? fiinta_fantastica +
 	culoare ?=? multicolor +
