@@ -496,7 +496,7 @@ premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? gri +
 	pret ?=? mare +
-	dimensiune_statuie ?=? mare
+	dimensiune_statuie ?=? mare +
 	material ?=? beton +
 	finisaj ?=? mat +
 	tip_gradina ?=? de_iarna
@@ -508,7 +508,7 @@ premise -> (
 	tip_statuie ?=? animal +
 	culoare ?=? gri +
 	pret ?=? mare +
-	dimensiune_statuie ?=? mare
+	dimensiune_statuie ?=? mare +
 	material ?=? beton +
 	finisaj ?=? mat +
 	tip_gradina ?=? de_zi
